@@ -1,0 +1,29 @@
+@import "colors";
+
+@mixin shadows {
+    box-shadow: 1px 1px 1px grey;
+}
+
+@mixin btn {
+    box-shadow: $shadows_btn;
+    background: linear-gradient(-10deg, $primary, $secondary,) ;
+    color: $grey_card;
+    border-radius: 30px;
+    border: 0;
+    font-weight: 500;
+}
+
+@mixin use_card {
+    // display: flex;
+    border-radius: 20px ;
+    background-color: $grey_card;
+    box-shadow: $shadows_card;
+    align-items: center;
+}
+
+@mixin resto_card {
+    border-radius: 20px ;
+    background-color: white;
+    box-shadow: $shadows_card;
+    align-items: center;
+}
