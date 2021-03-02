@@ -159,8 +159,16 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   margin: 20px;
   height: 230px;
+}
+
+.resto_container_card .fa-heart {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 30px;
 }
 
 .resto_container_card img {
@@ -187,10 +195,12 @@ header img {
   margin: 0px 10px;
 }
 
-.resto_container_card .legend .fa-heart {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  font-size: 30px;
+.resto_container_card .legend span {
+  margin-bottom: 5px;
+}
+
+.resto_container_card .legend .name {
+  font-weight: bold;
 }
 
 footer {
@@ -208,6 +218,10 @@ footer {
 footer svg {
   margin: 20px;
   width: 30%;
+}
+
+footer svg path {
+  fill: white;
 }
 
 footer .footer_ico {

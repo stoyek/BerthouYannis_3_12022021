@@ -1,29 +1,77 @@
 @import "colors";
 
+@mixin full_page {
+  * {
+    font-family: "roboto";
+    text-decoration: none;
+    color: black;
+  }
+  body {
+    margin: 0%;
+  }
+}
+
 @mixin shadows {
-    box-shadow: 1px 1px 1px grey;
+  box-shadow: 1px 1px 1px grey;
 }
 
 @mixin btn {
-    box-shadow: $shadows_btn;
-    background: linear-gradient(-10deg, $primary, $secondary,) ;
-    color: $grey_card;
-    border-radius: 30px;
-    border: 0;
-    font-weight: 500;
+  box-shadow: $shadows_btn;
+  background: linear-gradient(-10deg, $primary, $secondary);
+  color: $grey_card;
+  border-radius: 30px;
+  border: 0;
+  font-weight: 500;
 }
 
 @mixin use_card {
-    // display: flex;
-    border-radius: 20px ;
-    background-color: $grey_card;
-    box-shadow: $shadows_card;
-    align-items: center;
+  // display: flex;
+  border-radius: 20px;
+  background-color: $grey_card;
+  box-shadow: $shadows_card;
+  align-items: center;
 }
 
 @mixin resto_card {
-    border-radius: 20px ;
-    background-color: white;
-    box-shadow: $shadows_card;
-    align-items: center;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: $shadows_card;
+  align-items: center;
+}
+
+@mixin heart_logo {
+  .fa-heart {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    font-size: 30px;
+  }
+}
+
+@mixin footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    padding-bottom: 30px;
+  
+    svg{
+      margin: 20px;
+      width: 30%;
+      path{                       //logo color white
+        fill: white; 
+      }
+    }
+  
+    .footer_ico{
+      margin: 0px 0px 5px 20px;
+  
+      .fas{
+        color: white;
+        width: 10px;
+      }
+    }
+    a{
+      margin: 0px 0px 5px 20px;
+      color: white;
+    }
 }
