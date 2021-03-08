@@ -1,0 +1,63 @@
+@import "colors";
+
+@keyframes loading{
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    50%{
+        opacity: 1;
+        transform: rotate(360deg);
+
+    }
+
+    100%{
+        opacity: 0;
+        transform: rotate(720deg);
+    
+    }
+}
+
+@keyframes display_load{
+    0%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes display_card{
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes anim_test{
+    from{
+        color: black;
+    }
+    to{
+        font-weight: bold;
+        background: linear-gradient($primary, $secondary);
+    }
+}
+
+
+// @mixin card_start {
+    
+// }
+
+// @mixin menu_card {
+    
+// }

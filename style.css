@@ -10,7 +10,7 @@
             transform: rotate(360deg);
   }
   100% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: rotate(720deg);
             transform: rotate(720deg);
   }
@@ -28,59 +28,9 @@
             transform: rotate(360deg);
   }
   100% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: rotate(720deg);
             transform: rotate(720deg);
-  }
-}
-
-@-webkit-keyframes display_load {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes display_load {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes display_card {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes display_card {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
   }
 }
 
@@ -104,46 +54,6 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     background: linear-gradient(#9356DC, #FF79DA);
   }
-}
-
-.intro img {
-  width: 100%;
-  height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.menu {
-  padding: 20px;
-  position: relative;
-  top: -50px;
-  background-color: #eaeaea;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 30px 30px 0px 0px;
-}
-
-.menu .intro_legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.menu .intro_legend h1 {
-  font-family: "Shrikhand", cursive;
-  font-weight: 200;
-  margin: 0;
-}
-
-.menu .intro_legend .fa-heart {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 * {
@@ -227,7 +137,7 @@ header img {
   width: 70%;
 }
 
-.find_container_reserve_title p {
+.find_container_reserve_title h3 {
   margin: auto;
   padding: 15px;
   width: 90%;
@@ -293,7 +203,6 @@ header img {
 }
 
 .resto {
-  position: relative;
   -o-object-fit: cover;
      object-fit: cover;
   background-color: #f6f6f6;
@@ -306,14 +215,10 @@ header img {
 }
 
 .resto .loading_animation {
-  display: block;
-  width: 50px;
-  height: 50px;
-  -webkit-animation: display_load 2s both;
-          animation: display_load 2s both;
-  position: absolute;
-  top: -5px;
-  left: 140px;
+  display: none;
+  width: 80px;
+  height: 80px;
+  margin: auto;
 }
 
 .resto .loading_animation .circle {
@@ -321,15 +226,13 @@ header img {
           box-sizing: border-box;
   display: block;
   position: absolute;
-  width: 32px;
-  height: 32px;
-  margin: 24px;
-  border: 1px solid #9356DC;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 2px solid #9356DC;
   border-radius: 50%;
   -webkit-animation: loading 2s infinite;
           animation: loading 2s infinite;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
   border-color: #FF79DA transparent #FF79DA transparent;
 }
 
@@ -338,12 +241,14 @@ header img {
           box-sizing: border-box;
   display: block;
   position: absolute;
-  width: 16px;
-  height: 16px;
-  margin: 32px;
-  border: 2px solid #9356DC;
+  width: 35px;
+  height: 35px;
+  margin: 23px;
+  border: 5px solid #9356DC;
   border-radius: 50%;
   animation: loading 1.5s infinite reverse;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
   border-color: #FF79DA #9356DC #FF79DA #9356DC;
 }
 
@@ -352,8 +257,6 @@ header img {
 }
 
 .resto_container_card {
-  -webkit-animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) 1s both;
-          animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) 1s both;
   border-radius: 20px;
   background-color: white;
   -webkit-box-shadow: 0px 3px 10px #dfdfdf;
@@ -364,26 +267,6 @@ header img {
   position: relative;
   margin: 20px;
   height: 230px;
-}
-
-.resto_container_card:nth-child(1) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.resto_container_card:nth-child(2) {
-  -webkit-animation-delay: 1.15s;
-          animation-delay: 1.15s;
-}
-
-.resto_container_card:nth-child(3) {
-  -webkit-animation-delay: 1.3s;
-          animation-delay: 1.3s;
-}
-
-.resto_container_card:nth-child(4) {
-  -webkit-animation-delay: 1.45s;
-          animation-delay: 1.45s;
 }
 
 .resto_container_card img {
@@ -442,11 +325,13 @@ footer {
   padding-bottom: 30px;
 }
 
-footer h2 {
-  font-family: "Shrikhand", cursive;
-  color: #fff;
-  font-weight: 100;
+footer svg {
   margin: 20px;
+  width: 30%;
+}
+
+footer svg path {
+  fill: white;
 }
 
 footer .footer_ico {
