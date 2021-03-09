@@ -106,6 +106,60 @@
   }
 }
 
+@keyframes loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
+@keyframes display_load {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes display_card {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes anim_test {
+  from {
+    color: black;
+  }
+  to {
+    font-weight: bold;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(#9356DC, #FF79DA);
+  }
+}
+
 .intro img {
   width: 100%;
   height: 250px;
@@ -117,7 +171,7 @@
   padding: 20px;
   position: relative;
   top: -50px;
-  background-color: #eaeaea;
+  background-color: #f6f6f6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 30px 30px 0px 0px;
@@ -146,6 +200,162 @@
       align-self: center;
 }
 
+.menu_container h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 5px 0px;
+  margin-top: 20px;
+}
+
+.menu_container .line {
+  display: block;
+  border-bottom: 3px solid #99E2D0;
+  width: 30px;
+  margin: 0;
+}
+
+.entree {
+  margin: 20px 0px;
+}
+
+.entree_card {
+  height: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 5px #d6d6d6;
+          box-shadow: 0px 0px 5px #d6d6d6;
+  background: white;
+  padding: 10px;
+  padding-right: 20px;
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.entree_card .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.entree_card .subname {
+  font-size: 14px;
+}
+
+.entree_card .prix {
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  top: 11px;
+}
+
+.plats {
+  margin: 20px 0px;
+}
+
+.plats_card {
+  height: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 5px #d6d6d6;
+          box-shadow: 0px 0px 5px #d6d6d6;
+  background: white;
+  padding: 10px;
+  padding-right: 20px;
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.plats_card .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.plats_card .subname {
+  font-size: 14px;
+}
+
+.plats_card .prix {
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  top: 11px;
+}
+
+.dessert {
+  margin: 20px 0px;
+}
+
+.dessert_card {
+  height: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 5px #d6d6d6;
+          box-shadow: 0px 0px 5px #d6d6d6;
+  background: white;
+  padding: 10px;
+  padding-right: 20px;
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.dessert_card .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.dessert_card .subname {
+  font-size: 14px;
+}
+
+.dessert_card .prix {
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  top: 11px;
+}
+
+.menu button {
+  -webkit-box-shadow: 0px 3px 8px #888787;
+          box-shadow: 0px 3px 8px #888787;
+  background: linear-gradient(-10deg, #9356DC, #FF79DA);
+  color: #f6f6f6;
+  border-radius: 30px;
+  border: 0;
+  font-weight: 500;
+  padding: 10px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin-top: 40px;
+}
+
 * {
   font-family: "roboto";
   text-decoration: none;
@@ -153,10 +363,13 @@
 }
 
 body {
+  background-color: #f6f6f6;
   margin: 0%;
 }
 
-header {
+.header_main {
+  height: 50px;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,15 +379,58 @@ header {
           justify-content: center;
 }
 
-header a {
+.header_main a {
+  margin: 0;
+  padding: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header_main img {
+  height: 24px;
+  margin-top: 10px;
+}
+
+.header_menu {
+  position: fixed;
+  height: 50px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-item-align: center;
+      align-self: center;
+  z-index: 1;
+}
+
+.header_menu a {
   margin: 0;
   padding: 0;
 }
 
-header img {
-  height: 25px;
-  margin: 10px;
-  margin-top: 25px;
+.header_menu img {
+  height: 24px;
+  margin-top: 10px;
+}
+
+.header_menu .arrow {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.header_menu .arrow .fas {
+  position: relative;
+  left: 20px;
+  color: #4d4d4d;
 }
 
 .find_container {
@@ -250,7 +506,8 @@ header img {
 }
 
 .use_container {
-  margin: 20px;
+  background-color: white;
+  padding: 20px;
 }
 
 .use_container_card_template {
@@ -309,8 +566,8 @@ header img {
   display: block;
   width: 50px;
   height: 50px;
-  -webkit-animation: display_load 2s both;
-          animation: display_load 2s both;
+  -webkit-animation: display_load 3s both;
+          animation: display_load 3s both;
   position: absolute;
   top: -5px;
   left: 140px;

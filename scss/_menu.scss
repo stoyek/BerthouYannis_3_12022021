@@ -1,34 +1,70 @@
 @import "colors";
+@import "mixins";
 
-.intro{
-    img{
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
+.intro {
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  padding: 20px;
+  position: relative;
+  top: -50px;
+  background-color: $grey_card;
+  box-sizing: border-box;
+  border-radius: 30px 30px 0px 0px;
+
+  .intro_legend {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      font-family: "Shrikhand", cursive;
+      font-weight: 200;
+      margin: 0;
+    }
+    .fa-heart {
+      align-self: center;
+    }
+  }
+}
+
+.menu_container{
+    h2{
+        font-size: 16px;
+        font-weight: 400;
+        margin: 5px 0px;
+        margin-top: 20px;
+    }
+    .line{
+        display: block;
+        border-bottom: 3px solid $tertiary;
+        width: 30px;
+        margin: 0;
     }
 }
 
-.menu{
-    padding: 20px;
-    position: relative;
-    top: -50px;
-    background-color: $grey_pos;
-    box-sizing: border-box;
-    border-radius: 30px 30px 0px 0px;
+.entree {
+    margin: 20px 0px;
+    @include menu_card;
+}
+.plats {
+    margin: 20px 0px;
+    @include menu_card;
+}
+.dessert {
+    margin: 20px 0px;
+    @include menu_card;
+}
 
-
-    .intro_legend{
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-
-        h1{
-            font-family: "Shrikhand", cursive;
-            font-weight: 200;
-            margin: 0;
-        }
-        .fa-heart{
-            align-self: center;
-        }
-    }
+.menu button{
+    @include btn;
+    padding: 10px 40px;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
 }
