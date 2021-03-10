@@ -2,6 +2,9 @@
 @import "mixins";
 @import "header";
 @import "menu";
+@import "media_query";
+
+// Mobile pages -------------------------------------------------->
 
 @include full_page;
 
@@ -62,6 +65,8 @@
     }
   }
 }
+
+// Fonctionnement ----------------------------------------------------->
 
 .use_container {
   background-color: white;
@@ -232,4 +237,53 @@ footer {
     margin: 0px 0px 5px 20px;
     color: white;
   }
+}
+
+// Mode tablette ----------------------------------------------------------->
+
+
+@media screen and (min-width: 426px) and (max-width: 1000px) {
+
+  section{
+    margin: auto;
+    max-width: 768px;
+  }
+
+  .find_container_reserve{
+    width: 100%;
+  }
+
+  .use_container{
+
+    padding-top: 10px;
+    padding-bottom: 40px;
+    
+    &_card_template{
+
+      margin:auto;
+      margin-top: 20px;
+      width: 70%;
+
+      .number{
+        position: relative;
+        left: -10px;
+      }
+
+
+    }
+  }
+
+  .resto{
+      &_container_card{
+      // height: 350px;
+      margin: auto;
+      margin-top: 20px;
+      width: 50%;
+    }
+  }
+
+  footer{
+    width: 100%;
+  }
+  
 }
