@@ -262,6 +262,16 @@
       justify-content: space-around;
 }
 
+.entree_card .fas {
+  font-size: 20px;
+  position: relative;
+  right: -40px;
+  top: -10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  vertical-align: center;
+}
+
 .entree_card .name {
   font-size: 15px;
   font-weight: 600;
@@ -342,6 +352,16 @@
       justify-content: space-around;
 }
 
+.plats_card .fas {
+  font-size: 20px;
+  position: relative;
+  right: -40px;
+  top: -10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  vertical-align: center;
+}
+
 .plats_card .name {
   font-size: 15px;
   font-weight: 600;
@@ -420,6 +440,16 @@
           flex-flow: column wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.dessert_card .fas {
+  font-size: 20px;
+  position: relative;
+  right: -40px;
+  top: -10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  vertical-align: center;
 }
 
 .dessert_card .name {

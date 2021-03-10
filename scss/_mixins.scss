@@ -49,6 +49,7 @@
 }
 
 @mixin menu_card {
+
   :nth-child(1){
     animation-delay: .45s;
   }
@@ -73,6 +74,15 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
+
+    .fas{
+      font-size: 20px;
+      position: relative;
+      right: -40px;
+      top: -10px;
+      align-self: flex-end;
+      vertical-align: center;
+    }
 
     .name {
       font-size: 15px;

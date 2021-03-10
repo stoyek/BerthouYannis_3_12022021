@@ -61,15 +61,13 @@
 
 }
 .dessert {
-    margin: 20px 0px;
-    @include menu_card;
+  margin: 20px 0px;
+  @include menu_card;
   animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) 1.3s 1s both;
 
 }
 
-.menu_container{
 
-}
 .menu button{
     @include btn;
     padding: 10px 40px;
