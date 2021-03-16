@@ -1,7 +1,9 @@
 @import "colors";
 @import "mixins";
+@import "animations";
 
 .intro {
+  height: 250px;
   img {
     width: 100%;
     height: 250px;
@@ -47,23 +49,29 @@
         width: 30px;
         margin: 0;
     }
+
+    .separator{
+      display: none;
+    }
 }
 
 .entree {
+  animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) .5s .1s both;
   margin: 20px 0px;
   @include menu_card;
-  animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) .30s 1s both;
+
+
 }
 .plats {
+  animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) .5s .1s both;
   margin: 20px 0px;
   @include menu_card;
-  animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) 1s 1s both;
 
 }
 .dessert {
+  animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) .5s .3s both;
   margin: 20px 0px;
   @include menu_card;
-  animation: display_card cubic-bezier(0.83, 0.02, 0.36, 1) 1.3s 1s both;
 
 }
 
@@ -74,4 +82,65 @@
     display: flex;
     margin: auto;
     margin-top: 40px;
+    &:focus{
+      border: 0;
+    }
+}
+
+
+@media screen and (min-width: 426px) and (max-width: 1000px){
+  body{
+    background-color:white ;
+  }
+  .intro{
+
+    img{
+      animation: menu_img 5s ease-out;
+    }
+  }
+  .menu{
+    border-top: 1px solid $secondary;
+    box-shadow: inset 0px 2px 3px rgb(165, 165, 165);
+    top: 0;
+    border-radius: 0px;
+    background: white;
+
+    &_container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      :nth-child(3){
+        margin: auto;
+      }
+
+      .separator{
+        opacity: 0;
+        display: block;
+        width: 60%;
+        border: 1px solid $tertiary;
+        animation: separator .3s 1s both;
+      }
+    }
+
+    .entree{
+      @include menu_card_tablet;
+      margin: 15px 0px;
+    }
+    .plats{
+      @include menu_card_tablet;
+      margin: 15px 0px;
+    }
+    .dessert{
+      @include menu_card_tablet;
+      margin-top: 15px;
+      width: 100%;
+      &_card{
+        width: 70%;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+
+    }
+  }
 }

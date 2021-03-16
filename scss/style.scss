@@ -11,12 +11,59 @@
 .header_main {
   @include header_main;
 }
-.header_menu{
+.header_menu {
   @include header_menu;
 }
 
-.find_container {
+.pages{
+  opacity: 0;
+  animation: pages 1s 2s both;
+}
 
+  // loader -------------------------------------------------->
+
+  .loading_animation {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    // width: 100%;
+    // height: 100%;
+    animation: display_load 3s both;
+    // animation-timing-function: cubic-bezier(1,0,1,0) ;
+    background-color: rgba($color: #99E2D0, $alpha: 0.1);
+    
+    .circle {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      top: 300px;
+      border: 2px solid $primary;
+      border-radius: 50%;
+      animation: loading_1 1s .5s infinite;
+      animation-delay: 0.15s;
+      border-color: $secondary transparent $secondary transparent;
+    }
+    .line {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      margin: auto;
+      top: 225px;
+      border: 3px solid $primary;
+      border-radius: 50%;
+      animation: loading_2 2s infinite reverse;
+      border-color: transparent $primary transparent $primary;
+    }
+  }
+
+.find_container {
   display: flex;
   flex-direction: column;
 
@@ -79,6 +126,9 @@
     padding: 10px 0px;
     font-weight: 500;
     font-size: 1em;
+    &:hover{
+      background-color: rgba($color: #9356DC, $alpha: 0.1);
+    }
 
     .number {
       position: absolute;
@@ -101,6 +151,9 @@
       font-size: 20px;
       text-align: center;
     }
+    &:hover .fas{
+      color: $primary;
+    }
   }
 }
 
@@ -114,43 +167,8 @@
     margin: 0%;
   }
 
-  // loader -------------------------------------------------->
 
-  .loading_animation {
-    display: block;
-    width: 50px;
-    height: 50px;
-    animation: display_load 3s both;
-    // animation-timing-function: cubic-bezier(1,0,1,0) ;
-    position: absolute;
-    top: -5px;
-    left: 140px;
-    .circle {
-      box-sizing: border-box;
-      display: block;
-      position: absolute;
-      width: 32px;
-      height: 32px;
-      margin: 24px;
-      border: 1px solid $primary;
-      border-radius: 50%;
-      animation: loading 2s infinite;
-      animation-delay: 0.15s;
-      border-color: $secondary transparent $secondary transparent;
-    }
-    .line {
-      box-sizing: border-box;
-      display: block;
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      margin: 32px;
-      border: 2px solid $primary;
-      border-radius: 50%;
-      animation: loading 1.5s infinite reverse;
-      border-color: $secondary $primary $secondary $primary;
-    }
-  }
+  // card ------------------------------------------------>
 
   &_container {
     display: block;
@@ -166,16 +184,16 @@
       // animation delay ------------------------------------->
 
       &:nth-child(1) {
-        animation-delay: 1s;
+        animation-delay: 2s;
       }
       &:nth-child(2) {
-        animation-delay: 1.15s;
+        animation-delay: 2.15s;
       }
       &:nth-child(3) {
-        animation-delay: 1.3s;
+        animation-delay: 2.3s;
       }
       &:nth-child(4) {
-        animation-delay: 1.45s;
+        animation-delay: 2.45s;
       }
 
       img {
@@ -202,11 +220,39 @@
       }
 
       .fa-heart {
-        @include heart_logo;
+        position: relative;
+        // position: relative;
+        left: 10px;
+        top: 10px;
+        font-size: 23px;
 
-        &:hover {
-          animation: anim_test 2s both;
+        height: 20px;
+        width: 20px;
+      }
+      .test{
+        .fas{
+          color: red;
         }
+        z-index: 0;
+        background-color: blue;
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+      }
+      
+      .hovertest{
+        .far{
+          color: blue;
+        }
+        
+        background: linear-gradient( 10deg, $primary, $secondary);
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
       }
     }
   }
@@ -241,49 +287,104 @@ footer {
 
 // Mode tablette ----------------------------------------------------------->
 
-
-@media screen and (min-width: 426px) and (max-width: 1000px) {
-
-  section{
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  body{
+    // background: transparent;
+  }
+  section {
     margin: auto;
-    max-width: 768px;
   }
 
-  .find_container_reserve{
+  .find_container_reserve {
     width: 100%;
   }
 
-  .use_container{
-
+  .use_container {
     padding-top: 10px;
     padding-bottom: 40px;
     
-    &_card_template{
+    &_card{
+      &_template {
+        margin: auto;
+        margin-top: 20px;
+        width: 60%;
+  
+        .number {
+          position: relative;
+          left: -10px;
+        }
+      }
+    }
+  }
 
-      margin:auto;
+  .resto {
+    &_container{
+      max-width: 800px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: auto;
+
+    &_card {
+      height: 250px;
+      width: 300px;
+      margin: 0;
       margin-top: 20px;
-      width: 70%;
+    }
+  }
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1025px){
+  body{
+    background: transparent;
+    margin: auto;
+    max-width: 1440px;
+  }
+
+  .find_container{
+    width: 100%;
+    &_reserve{
+      width: 100%;
+    }
+  }
+
+  .use_container{
+    width: 100%;
+    padding: 20px 0px;
+    h2{
+      padding: 0px 20px;
+    }
+    &_card{
+      display: flex;
+      justify-content: space-around;
+
+      &_template{
+        width: 30%;
+      }
 
       .number{
         position: relative;
-        left: -10px;
+        margin-left: -20px;
       }
-
-
     }
   }
 
   .resto{
-      &_container_card{
-      // height: 350px;
-      margin: auto;
-      margin-top: 20px;
-      width: 50%;
+    background-color: transparent;
+
+    &_container{
+      display: flex;
+
+      &_card{
+        width: 25%;
+
+      }
     }
   }
-
-  footer{
-    width: 100%;
-  }
-  
 }

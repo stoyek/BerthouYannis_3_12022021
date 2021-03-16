@@ -1,20 +1,50 @@
 @import "colors";
 
-@keyframes loading{
+
+
+@keyframes pages{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes loading_1{
     0%{
         opacity: 0;
-        transform: rotate(0deg);
+        transform: rotate(0deg) scale(0);
     }
 
-    50%{
+    50%{        
         opacity: 1;
-        transform: rotate(360deg);
+        transform: rotate(720deg) scale(1.2);
 
     }
 
     100%{
         opacity: 0;
-        transform: rotate(720deg);
+        transform: rotate(0deg) scale(0);
+    
+    }
+}
+
+@keyframes loading_2{
+    0%{
+        opacity: 0;
+        transform: rotate(0deg) scale(0);
+    }
+
+    50%{        
+        opacity: 1;
+        transform: rotate(360deg) scale(1.1);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: rotate(720deg) scale(1.2);
     
     }
 }
@@ -34,7 +64,7 @@
 @keyframes display_card{
     from{
         opacity: 0;
-        transform: translateY(200px);
+        transform: translateY(50px);
 
     }
     to{
@@ -50,6 +80,40 @@
     to{
         font-weight: bold;
         background: linear-gradient($primary, $secondary);
+    }
+}
+
+@keyframes menu_check{
+    from{
+        opacity: 0;
+    }
+    to{
+        transform: translateX(-40px) rotate(-360deg) ;
+        opacity: 1;
+    }
+}
+
+@keyframes menu_img{
+    from{
+        
+        transform: scale(1.2) translateX(-30px);
+        opacity: 0.9;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes separator{
+    from{
+        opacity: 0;
+        transform: scale(-1);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
