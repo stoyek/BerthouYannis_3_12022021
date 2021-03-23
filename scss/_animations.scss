@@ -64,7 +64,7 @@
 @keyframes display_card{
     from{
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(20px);
 
     }
     to{
@@ -96,11 +96,11 @@
 @keyframes menu_img{
     from{
         
-        transform: scale(1.2) translateX(-30px);
+        transform:scale(1.2) translateX(-10px);
         opacity: 0.9;
     }
     to{
-        transform: translateX(0);
+        transform: translateX(0px);
         opacity: 1;
     }
 }
