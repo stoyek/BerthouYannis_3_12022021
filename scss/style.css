@@ -538,8 +538,8 @@
           transform: scale(0);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
+  background-clip: content-box;
+  -webkit-background-clip: content-box;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -636,12 +636,6 @@
   transition: all .4s .1s ease-in-out;
 }
 
-.entree_card:hover i {
-  -webkit-transform: translateX(-40px) rotate(-360deg);
-          transform: translateX(-40px) rotate(-360deg);
-  opacity: 1;
-}
-
 .entree_card .green_check {
   z-index: -1;
   position: absolute;
@@ -653,10 +647,21 @@
   transition: all .5s ease-in-out;
 }
 
+.entree_card:hover i {
+  -webkit-transform: translateX(-40px) rotate(-360deg);
+          transform: translateX(-40px) rotate(-360deg);
+  opacity: 1;
+}
+
 .entree_card:hover .green_check {
   -webkit-transform: translateX(-40px);
           transform: translateX(-40px);
   width: 60px;
+}
+
+.entree_card:hover .prix {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
 .entree_card .name {
@@ -689,11 +694,6 @@
   top: 23px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-}
-
-.entree_card:hover .prix {
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
 }
 
 .entree_card :nth-child(1) {
@@ -775,12 +775,6 @@
   transition: all .4s .1s ease-in-out;
 }
 
-.plats_card:hover i {
-  -webkit-transform: translateX(-40px) rotate(-360deg);
-          transform: translateX(-40px) rotate(-360deg);
-  opacity: 1;
-}
-
 .plats_card .green_check {
   z-index: -1;
   position: absolute;
@@ -792,10 +786,21 @@
   transition: all .5s ease-in-out;
 }
 
+.plats_card:hover i {
+  -webkit-transform: translateX(-40px) rotate(-360deg);
+          transform: translateX(-40px) rotate(-360deg);
+  opacity: 1;
+}
+
 .plats_card:hover .green_check {
   -webkit-transform: translateX(-40px);
           transform: translateX(-40px);
   width: 60px;
+}
+
+.plats_card:hover .prix {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
 .plats_card .name {
@@ -828,11 +833,6 @@
   top: 23px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-}
-
-.plats_card:hover .prix {
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
 }
 
 .plats_card :nth-child(1) {
@@ -914,12 +914,6 @@
   transition: all .4s .1s ease-in-out;
 }
 
-.dessert_card:hover i {
-  -webkit-transform: translateX(-40px) rotate(-360deg);
-          transform: translateX(-40px) rotate(-360deg);
-  opacity: 1;
-}
-
 .dessert_card .green_check {
   z-index: -1;
   position: absolute;
@@ -931,10 +925,21 @@
   transition: all .5s ease-in-out;
 }
 
+.dessert_card:hover i {
+  -webkit-transform: translateX(-40px) rotate(-360deg);
+          transform: translateX(-40px) rotate(-360deg);
+  opacity: 1;
+}
+
 .dessert_card:hover .green_check {
   -webkit-transform: translateX(-40px);
           transform: translateX(-40px);
   width: 60px;
+}
+
+.dessert_card:hover .prix {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
 .dessert_card .name {
@@ -967,11 +972,6 @@
   top: 23px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-}
-
-.dessert_card:hover .prix {
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
 }
 
 .dessert_card :nth-child(1) {
@@ -1594,8 +1594,8 @@ body {
           transform: scale(0);
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
+  background-clip: content-box;
+  -webkit-background-clip: content-box;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -1685,7 +1685,7 @@ footer a {
   body {
     background: transparent;
   }
-  section {
+  section, .loader {
     margin: auto;
     max-width: 1440px;
   }
