@@ -527,20 +527,20 @@
 }
 
 .menu .intro_legend .fa-heart {
-  font-size: 25px;
   position: absolute;
+  font-size: 25px;
 }
 
 .menu .intro_legend .state_1 {
-  color: transparent;
+  opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: content-box;
-  -webkit-background-clip: content-box;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu .intro_legend .state_2 {
@@ -1582,20 +1582,20 @@ body {
 }
 
 .resto_container_card .fa-heart {
-  font-size: 25px;
   position: absolute;
+  font-size: 25px;
 }
 
 .resto_container_card .state_1 {
-  color: transparent;
+  opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: content-box;
-  -webkit-background-clip: content-box;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .resto_container_card .state_2 {
